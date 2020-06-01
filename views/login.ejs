@@ -1,0 +1,34 @@
+<% layout('layout') %>
+<div class='ui container main text segment'>
+   <form class="ui form" method = 'post' action = '/login' >
+        
+        <div class="field">
+            <label for='email'>Email</label>
+            <input name ='email' placeholder='Email' type='email'>
+        </div>
+        <div class='field'>
+            <label for='password'>Password</label>
+            <input type="password" name='password' >
+        </div>
+        <div class='field'>
+             <button class="ui button green" type="submit">Login</button>
+        </div>
+        <small>Need an account? <a href="/register">Register</a></small>
+       
+    </form>
+</div>
+
+<div class='ui container main text segment'>
+   <form class="ui form" method = 'post' action = '/account/forgot' >
+        <h2>I FORGOT MY PASSWORD</h2>
+        <div class="field">
+            <label for='email'>Email</label>
+            <input name ='email' placeholder='Email' type='email'>
+        </div>
+
+        <div class='field'>
+             <button class="ui button inverted green" type="submit">SEND A PASSWORD RESET</button>
+        </div>
+       
+    </form>
+</div>

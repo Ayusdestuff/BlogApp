@@ -1,0 +1,31 @@
+<% layout('layout') %>
+<div class='ui container main header segment'>
+   <form class="ui form" method = 'post' action = '/posts' enctype='multipart/form-data'>
+        <div class="field">
+            <label>Title</label>
+            <input name="title" placeholder="Post Title" type="text">
+        </div>
+        <div class="field">
+            <label for='content'>Content</label>
+            <textarea name ='content' placeholder='Post Content' id='body'></textarea>
+        </div>
+        <div class = 'field'>
+            <label for="category">Category</label>
+            
+                <select name = 'category' class='ui fluid search selection dropdown'>
+                 <%categories.forEach(function(category){%>
+                    <option value="<%=category.name%>"><%=category.name.toUpperCase()%></option>
+                    <%})%>
+                </select>
+        </div>
+        <div class='field'>
+            <label for="image">Image</label>
+             <input type="file" name='image' accept = 'image/jpeg, image/png, image/gif'>
+        </div>
+        
+        <div class='field'>
+             <button class="ui button green" type="submit">Submit</button>
+        </div>
+       
+    </form>
+</div>
